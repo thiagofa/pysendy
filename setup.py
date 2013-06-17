@@ -17,7 +17,7 @@ setup(
     keywords='pysendy sendy sendy.co wrapper api',
     zip_safe=True,
     install_requires=['requests'],
-    py_modules=['pysendy'],
+    py_modules=[],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
