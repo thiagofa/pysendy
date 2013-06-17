@@ -8,7 +8,7 @@ setup(
     name='pysendy',
     version=version,
     description='Sendy API v1.1.7 for Python.',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     author='Thiago Faria de Andrade',
     author_email='thiagofa@gmail.com',
     url='https://github.com/thiagofa/pysendy',
