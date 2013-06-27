@@ -17,4 +17,4 @@ Release logic:
 __author__ = 'Thiago Faria de Andrade'
 __copyright__ = 'Copyright 2013, Thiago Faria de Andrade'
 __credits__ = ['Thiago Faria de Andrade',]
-__version__ = '0.0.2.dev0'
+__version__ = '0.0.2'
