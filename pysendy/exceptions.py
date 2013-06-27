@@ -13,5 +13,5 @@ SUBSCRIPTION_ERRORS = {
     'Already subscribed.': AlreadySubscribedException,
     'Invalid email address.': InvalidEmailAddressException,
     'Some fields are missing.': SomeFieldsAreMissingException,
-    'Invalid list ID': InvalidListIdException,
+    'Invalid list ID.': InvalidListIdException,
 }
