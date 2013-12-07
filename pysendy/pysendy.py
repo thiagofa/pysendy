@@ -9,18 +9,27 @@ class Sendy(object):
         self.base_url = base_url
 
     def subscribe(self, name='', email='', list_id=''):
-        url = self.base_url + '/subscribe'
-        params = {'name': name, 'email': email, 'list': list_id, 'boolean': 'true'}
+        params = {'name': name, 'email': email, 'list': list_id}
+        self._post('/subscribe', params, SUBSCRIPTION_ERRORS)
+
+    def unsubscribe(self, email='', list_id=''):
+        params = {'email': email, 'list': list_id}
+        self._post('/unsubscribe', params, UNSUBSCRIPTION_ERRORS)
+
+    def _post(self, path, params, errors):
+        url = self.base_url + path
+        _params = {'boolean': 'true'}
+        _params.update(params)
 
         try:
-            response = requests.post(url, data=params)
-            subscribed = response.text == '1'
+            response = requests.post(url, data=_params)
+            success = response.text == '1'
         
-            if not subscribed:
+            if not success:
                 try:
-                    err = SUBSCRIPTION_ERRORS[response.text](response.text)
+                    err = errors[response.text](response.text)
                 except KeyError:
-                    err = UserException('Not subscribed: ' + response.text)
+                    err = UserException('Failed [' + path + ']: ' + response.text)
 
                 raise err
 

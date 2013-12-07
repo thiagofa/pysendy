@@ -15,3 +15,8 @@ SUBSCRIPTION_ERRORS = {
     'Some fields are missing.': SomeFieldsAreMissingException,
     'Invalid list ID.': InvalidListIdException,
 }
+
+UNSUBSCRIPTION_ERRORS = {
+	'Some fields are missing.': SomeFieldsAreMissingException,
+	'Invalid email address.': InvalidListIdException,
+}
