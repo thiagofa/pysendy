@@ -2,7 +2,7 @@
 import sys
 from setuptools import setup, find_packages
 
-version = __import__('pysendy').__version__
+version = '0.0.4.dev0'
 
 setup(
     name='pysendy',
