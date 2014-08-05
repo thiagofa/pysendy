@@ -8,8 +8,10 @@ class Sendy(object):
         self.api_key = api_key
         self.base_url = base_url
 
-    def subscribe(self, name='', email='', list_id=''):
+    def subscribe(self, name='', email='', list_id='', **fields):
         params = {'name': name, 'email': email, 'list': list_id}
+        for key, val in fields.items():
+            params.update({key:val})
         self._post('/subscribe', params, SUBSCRIPTION_ERRORS)
 
     def unsubscribe(self, email='', list_id=''):
