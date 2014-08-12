@@ -15,8 +15,9 @@ from pysendy import Sendy
 s = Sendy(base_url='http://your_sendy_url')
 
 # subscription (name is optional)
-s.subscribe(name='John Doe', email='email@to.subscribe', list_id='the_list_id', custom_field1='custom_value1', custom_value2='custom_value2')
+s.subscribe(name='John Doe', email='email@to.subscribe', list_id='the_list_id', 
+    custom_field1='custom_value1', custom_value2='custom_value2')
 
 # unsubscription
-s.unsubscribe(email='email@to.subscribe', list_id='the_list_id')
+s.unsubscribe(email='email@to.unsubscribe', list_id='the_list_id')
 ```
